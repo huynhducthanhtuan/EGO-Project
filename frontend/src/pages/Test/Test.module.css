@@ -1,0 +1,174 @@
+.homeSlider h2 {
+  padding: 15px 24px;
+  background: #adc8e0;
+  box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+  border-radius: 10px;
+  width: 330px;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+.homeSlider {
+  background: #f9f8f8;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.row {
+  box-sizing: border-box;
+}
+
+.question_form {
+  border: 1px solid #e9e9e9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgb(33 47 63 / 10%);
+  background: white;
+  width: 770px;
+  margin: 20px auto;
+}
+.question .content {
+  font-size: 18px;
+  font-weight: 550;
+}
+.question .score {
+  font-size: 16px;
+  color: green;
+}
+
+.answers {
+  text-align: left;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.answer_form {
+  display: flex;
+  margin: 0 30px;
+}
+
+.question_form input {
+  border: none;
+  font-family: \;;
+}
+
+.question_form input:focus {
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.question {
+  padding-bottom: 10px;
+  text-align: left;
+  margin: 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.answers .text {
+  width: 100%;
+}
+
+.question_form {
+  border: 1px solid #e9e9e9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgb(33 47 63 / 10%);
+  background: white;
+  width: 770px;
+  margin: 20px auto;
+}
+
+.answers {
+  text-align: left;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.answer_form {
+  display: flex;
+  margin: 0 30px;
+}
+
+.question_form input {
+  border: none;
+  font-family: \;;
+}
+
+.question_form input:focus {
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.question {
+  padding-bottom: 10px;
+  text-align: left;
+  margin: 0 25px;
+  display: flex;
+}
+
+.question input {
+  font-size: 18px;
+  width: 100%;
+}
+
+.answers input {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.answer_form input {
+  font-size: 17px;
+}
+
+.answers .text {
+  width: 100%;
+}
+
+.formAction {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+.formSubmit {
+  text-align: right;
+  margin-right: 10px;
+}
+.icons {
+  cursor: pointer;
+  font-size: 18px;
+}
+.formResult span {
+  padding-left: 10px;
+}
+.formScore {
+  display: flex;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  margin: auto;
+  color: darkred;
+}
+.answer_form span {
+  margin: 8px;
+}
+
+.btnSubmit {
+  border: none;
+  font-size: 20px;
+  padding: 6px 20px;
+  border-radius: 15px;
+  background: #adc8e0;
+  cursor: pointer;
+  margin: 10px 0 40px 0;
+}
+.countdown {
+  font-size: 25px;
+  border: 1px solid #e9e9e9;
+  width: 100px;
+  margin: 5px auto;
+  padding: 8px 20px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #b3bbc4 0%, #9ea5ac 100%);
+}

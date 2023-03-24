@@ -1,0 +1,119 @@
+/registers:
+  post:
+    tags:
+      - Register Courses
+    summary: Register course
+    description: Register course
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              userId:
+                type: string
+                example: "63f208ab4c52335ac1ec1fe1"
+              courseId:
+                type: string
+                example: "63f1a504ec4c6d99de2315fc"
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+  delete:
+    tags:
+      - Register Courses
+    summary: Delete many registers
+    description: Delete many registers
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              registerIds:
+                type: Array
+                example:
+                  ["63f208ab4c52335ac1ec1fe1", "63f1a504ec4c6d99de2315fc"]
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+  get:
+    tags:
+      - Register Courses
+    summary: Get Register by userId and courseId
+    description: Get Register by userId and courseId
+    parameters:
+      - in: query
+        name: userId
+        description: ID of user
+        schema:
+          type: string
+      - in: query
+        name: courseId
+        description: ID of the course
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+/registers/{registerId}:
+  delete:
+    tags:
+      - Register Courses
+    summary: Delete register by Id
+    description: Delete register by Id
+    parameters:
+      - in: path
+        name: registerId
+        description: ID of the register
+        required: true
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+/registers/my-registers:
+  get:
+    tags:
+      - Register Courses
+    summary: Get registered courses by user
+    description: Get registered courses by user
+    parameters:
+      - in: query
+        name: userId
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+/registers/my-not-registers:
+  get:
+    tags:
+      - Register Courses
+    summary: Get not registered courses by user
+    description: Get not registered courses by user
+    parameters:
+      - in: query
+        name: userId
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request

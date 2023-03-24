@@ -1,0 +1,151 @@
+/courses:
+  get:
+    tags:
+      - Courses
+    summary: Get courses (by user ID)
+    description: Get courses (by user ID)
+    parameters:
+      - in: query
+        name: userId
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+  post:
+    tags:
+      - Courses
+    summary: Create new course
+    description: Create new course
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                required: true
+              cost:
+                type: integer
+                required: true
+              description:
+                type: string
+                required: true
+              thumbnail:
+                type: string
+                required: true
+              userId:
+                type: string
+                required: true
+            example:
+              name: "Tên khóa học"
+              cost: 1000000
+              description: "Mô tả khóa học"
+              thumbnail: "https://example.com/image.png"
+              userId: "63f208ab4c52335ac1ec1fe1"
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+      "404":
+        description: Not Found
+  delete:
+    tags:
+      - Courses
+    summary: Delete many courses by IDs
+    description: Delete many courses by IDs
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - courseIds
+            properties:
+              courseIds:
+                type: array
+            example:
+              courseIds:
+                ["63kk291a2e1807d7370e9700", "63kk291a2e1807d7370e9701"]
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+/courses/{courseId}:
+  get:
+    tags:
+      - Courses
+    summary: Get course by ID
+    description: Get course by ID
+    parameters:
+      - in: path
+        name: courseId
+        schema:
+          type: string
+        required: true
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+  patch:
+    tags:
+      - Courses
+    summary: Update course by ID
+    description: Update course by ID
+    parameters:
+      - in: path
+        name: courseId
+        schema:
+          type: string
+          required: true
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                required: false
+              cost:
+                type: integer
+                required: false
+              description:
+                type: string
+                required: false
+              thumbnail:
+                type: string
+                required: false
+            example:
+              name: "Tên khóa học"
+              cost: 1000000
+              description: "Mô tả khóa học"
+              thumbnail: "https://example.com/image.png"
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+  delete:
+    tags:
+      - Courses
+    summary: Delete course by ID
+    description: Delete course by ID
+    parameters:
+      - in: path
+        name: courseId
+        schema:
+          type: string
+        required: true
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request

@@ -1,0 +1,79 @@
+/users/:
+  post:
+    tags:
+      - Users
+    summary: Create new user
+    description: Create new user
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+                example: "username"
+              password:
+                type: string
+                example: "password123"
+              name:
+                type: string
+                example: "Nguyen Van A"
+              email:
+                type: string
+                example: "example@gmail.com"
+              role:
+                type: integer
+                example: 1
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+      "500":
+        description: Server Error
+
+/users/signin:
+  post:
+    tags:
+      - Users
+    summary: Sign in
+    description: Sign in
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+                example: "username"
+              password:
+                type: string
+                example: "password123"
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+/users/check-valid-token:
+  post:
+    tags:
+      - Users
+    summary: Check valid token
+    description: Check valid token
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              token:
+                type: string
+                example: "***"
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Fail

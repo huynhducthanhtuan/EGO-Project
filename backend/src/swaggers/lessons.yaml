@@ -1,0 +1,148 @@
+/lessons:
+  post:
+    tags:
+      - Lessons
+    summary: Create a Lesson
+    description: Create a Lesson
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                example: "Học JS cơ bản"
+              description:
+                type: string
+                example: "Đây là phần mô tả bài học"
+              videoId:
+                type: string
+                example: "123456789ab"
+              courseId:
+                type: string
+                example: "63da29aae447df24915d7870"
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+      "500":
+        description: Server Error
+
+  get:
+    tags:
+      - Lessons
+    summary: Get all Lessons
+    description: Get all Lessons
+    parameters:
+      - in: query
+        name: courseId
+        description: ID of the course
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+      "500":
+        description: Server Error
+
+/lessons/{lessonId}:
+  get:
+    tags:
+      - Lessons
+    summary: Get a Lesson
+    description: Get a Lesson
+    parameters:
+      - in: path
+        name: lessonId
+        description: Id of the lesson
+        required: true
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+  delete:
+    tags:
+      - Lessons
+    summary: Delete lesson by Id
+    description: Delete lesson by Id
+    parameters:
+      - in: path
+        name: lessonId
+        schema:
+          type: string
+        required: true
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+  patch:
+    tags:
+      - Lessons
+    summary: Update lesson by Id
+    description: Update lesson by Id
+    parameters:
+      - in: path
+        name: lessonId
+        schema:
+          type: string
+          required: true
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                required: false
+                example: "Học JS cơ bản"
+              description:
+                type: string
+                required: false
+                example: "Đây là phần mô tả bài học"
+              videoId:
+                type: string
+                required: false
+                example: "123456789ab"
+              courseId:
+                type: string
+                example: "63da29aae447df24915d7870"
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+/lessons/:
+  delete:
+    tags:
+      - Lessons
+    summary: Delete many lessons by Ids
+    description: Delete many lessons by Ids
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - lessonIds
+            properties:
+              lessonIds:
+                type: array
+            example:
+              lessonIds:
+                ["63kk291a2e1807d7370e9700", "63kk291a2e1807d7370e9701"]
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request

@@ -1,0 +1,171 @@
+/questions/:
+  post:
+    tags:
+      - Questions
+    summary: Create new question
+    description: Create new question
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              testId:
+                type: string
+                required: true
+              content:
+                type: string
+                required: true
+              isMultiChoice:
+                type: boolean
+                required: true
+              score:
+                type: integer
+                required: true
+              answers:
+                type: array
+                required: true
+            example:
+              testId: "63f6181b24a3e1d7cadbfa47"
+              content: "Nội dung câu hỏi"
+              isMultiChoice: false
+              score: 100
+              answers:
+                [
+                  { content: "Nội dung đáp án 1", isCorrect: true },
+                  { content: "Nội dung đáp án 2", isCorrect: false },
+                  { content: "Nội dung đáp án 3", isCorrect: false },
+                  { content: "Nội dung đáp án 4", isCorrect: false }
+                ]
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+      "404":
+        description: Not Found
+  delete:
+    tags:
+      - Questions
+    summary: Delete many questions by IDs
+    description: Delete many questions by IDs
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              questionIds:
+                type: array
+                required: true
+            example:
+              questionIds:
+                ["63kk291a2e1807d7370e9700", "63kk291a2e1807d7370e9701"]
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+/questions/{questionId}:
+  patch:
+    tags:
+      - Questions
+    summary: Update question
+    description: Update question including its answers
+    parameters:
+      - in: path
+        name: questionId
+        schema:
+          type: string
+          required: true
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              testId:
+                type: string
+                required: true
+              content:
+                type: string
+                required: false
+              isMultiChoice:
+                type: boolean
+                required: false
+              score:
+                type: integer
+                required: false
+              answers:
+                type: array
+                required: false
+            example:
+              testId: "63f6181b24a3e1d7cadbfa47"
+              content: "Nội dung câu hỏi"
+              isMultiChoice: false
+              score: 100
+              answers:
+                [
+                  {
+                    content: "Nội dung đáp án 1",
+                    isCorrect: true,
+                    answerId: "60f83c918a1bc155595c0f42"
+                  },
+                  {
+                    content: "Nội dung đáp án 2",
+                    isCorrect: false,
+                    answerId: "60f83c918a1bc155595c0f42"
+                  },
+                  {
+                    content: "Nội dung đáp án 3",
+                    isCorrect: false,
+                    answerId: "60f83c918a1bc155595c0f42"
+                  },
+                  {
+                    content: "Nội dung đáp án 4",
+                    isCorrect: false,
+                    answerId: "60f83c918a1bc155595c0f42"
+                  }
+                ]
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+      "404":
+        description: Not Found
+  delete:
+    tags:
+      - Questions
+    summary: Delete question by ID
+    description: Delete question by ID
+    parameters:
+      - in: path
+        name: questionId
+        schema:
+          type: string
+          required: true
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+
+  get:
+    tags:
+      - Questions
+    summary: Get a Question
+    description: Get a Question
+    parameters:
+      - in: path
+        name: questionId
+        description: Id of the question
+        required: true
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request

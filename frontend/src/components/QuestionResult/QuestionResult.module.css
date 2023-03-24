@@ -1,0 +1,113 @@
+.question_form {
+  border: 1px solid #e9e9e9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgb(33 47 63 / 10%);
+  background: white;
+  width: 770px;
+  margin: 20px auto;
+}
+
+.answers {
+  text-align: left;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.answer_form {
+  display: flex;
+  margin: 0 30px;
+}
+
+.question_form input {
+  border: none;
+  font-family: \;;
+}
+
+.question_form input:focus {
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.question {
+  padding-bottom: 10px;
+  text-align: left;
+  margin: 0 25px;
+  display: flex;
+}
+
+.question input {
+  font-size: 18px;
+  width: 100%;
+}
+
+.answers input {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.answers .text {
+  width: 100%;
+}
+
+.formAction {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+.formSubmit {
+  text-align: right;
+  margin-right: 10px;
+}
+.multiChoice {
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(12, 119, 119);
+}
+.formSubmit button {
+  font-size: 19px;
+  padding: 7px 0;
+  width: 100px;
+  margin: 10px 20px;
+  background: #adc8e0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: \;;
+}
+
+.icons {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.answerCorrectIcon {
+  font-size: 30px;
+  color: green;
+}
+
+.formAction .icons {
+  margin-top: 20px;
+}
+
+.formResult {
+  color: green;
+  cursor: pointer;
+}
+.formResult span {
+  padding-left: 10px;
+}
+.formScore {
+  display: flex;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  margin: auto;
+  color: darkred;
+}
+.formScore input {
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 5px;
+  color: darkred;
+}

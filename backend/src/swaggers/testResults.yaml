@@ -1,0 +1,62 @@
+/test-results:
+  get:
+    tags:
+      - Test Results
+    summary: Get test result
+    description: Get test result
+    parameters:
+      - in: query
+        name: testId
+        schema:
+          type: string
+      - in: query
+        name: userId
+        schema:
+          type: string
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+  post:
+    tags:
+      - Test Results
+    summary: Submit a test
+    description: Submit a test
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              userId:
+                type: string
+                example: "63f6e9a39293091ab82b957e"
+              testId:
+                type: string
+                example: "63f6ddd471f240f9034f8e31"
+              results:
+                type: Array
+                properties:
+                  questionId:
+                    type: string
+                  answers:
+                    type: Array
+                example:
+                  [
+                    {
+                      questionId: "63f83c918a1bc155595c0f40",
+                      answers: ["63f83c918a1bc155595c0f43"]
+                    },
+                    {
+                      questionId: "63f83c7a3676d32c31559c68",
+                      answers: ["63f208ab4c52335ac1ec1fe1"]
+                    }
+                  ]
+    responses:
+      "200":
+        description: Success
+      "400":
+        description: Bad Request
+      "404":
+        description: Not Found

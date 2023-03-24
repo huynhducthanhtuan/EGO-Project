@@ -1,0 +1,171 @@
+.homeBanner img {
+  width: 100%;
+}
+
+.homeCourseText {
+  text-align: center;
+  /* padding: 25px 0 60px 0; */
+}
+
+.homeCourseTextP {
+  width: 594px;
+  margin: 0 auto;
+}
+
+.homeCourseText p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  padding-top: 15px;
+}
+
+.homeSliderItem {
+  text-align: center;
+  color: #333;
+  width: 300px;
+  height: 260px;
+}
+
+.homeSlider h2 {
+  padding: 15px 24px;
+  background: #adc8e0;
+  box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+  border-radius: 10px;
+  width: 330px;
+  margin: auto;
+  margin-bottom: 45px;
+}
+
+.homeSlider {
+  background: #f9f8f8;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 20px;
+}
+.itemImage {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.row {
+  box-sizing: border-box;
+}
+
+.listCourse {
+  width: 29%;
+  display: flex;
+  border: 1px solid #e9e9e9;
+  margin: 10px;
+  padding: 20px 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgb(33 47 63 / 10%);
+}
+
+.listCourse:hover {
+  box-shadow: 4px 4px 12px rgb(33 47 63 / 30%);
+}
+.question_form {
+  border: 1px solid #e9e9e9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgb(33 47 63 / 10%);
+  background: white;
+  width: 770px;
+  margin: 20px auto;
+}
+
+.answers {
+  text-align: left;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.answer_form {
+  display: flex;
+  margin: 0 30px;
+}
+
+.question_form input {
+  border: none;
+  font-family: \;;
+}
+
+.question_form input:focus {
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+.question {
+  padding-bottom: 10px;
+  text-align: left;
+  margin: 0 25px;
+  display: flex;
+}
+
+.question input {
+  font-size: 18px;
+  width: 100%;
+}
+
+.answers input {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.answers .text {
+  width: 100%;
+}
+
+.formAction {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+.formSubmit {
+  text-align: right;
+  margin-right: 10px;
+}
+.formSubmit button {
+  font-size: 19px;
+  padding: 7px 0;
+  width: 100px;
+  margin: 10px 20px;
+  background: #adc8e0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 400;
+  font-family: \;;
+}
+
+.icons {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.answer_correct_icon {
+  font-size: 30px;
+  color: green;
+}
+
+.formAction .icons {
+  margin-top: 20px;
+}
+
+.formResult {
+  color: green;
+  cursor: pointer;
+}
+.formResult span {
+  padding-left: 10px;
+}
+.btnCreate {
+  border: none;
+  font-size: 16px;
+  padding: 6px 20px;
+  border-radius: 15px;
+  background: #adc8e0;
+  cursor: pointer;
+}

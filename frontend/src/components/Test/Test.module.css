@@ -1,0 +1,115 @@
+.listTest {
+  position: relative;
+  width: 29%;
+  display: flex;
+  border: 1px solid #e9e9e9;
+  margin: 10px;
+  padding: 20px 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgb(33 47 63 / 10%);
+  height: 160px;
+}
+
+.listTest:hover {
+  box-shadow: 4px 4px 12px rgb(33 47 63 / 30%);
+}
+
+.itemImage {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 140px;
+  max-height: 140px;
+  height: auto;
+  margin: auto;
+  line-height: 170px;
+}
+
+.test__left {
+  width: 140px;
+}
+
+.test__right {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.test__cost {
+  font-size: 14px;
+}
+
+.test__cost svg {
+  padding-right: 5px;
+}
+
+.test__description {
+  color: rgb(127, 124, 124) !important;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  height: 40px;
+  font-size: 14px;
+}
+
+.listTest .register_button {
+  font-size: 16px;
+  padding: 6px 20px;
+  border-radius: 15px;
+  background: #adc8e0;
+  cursor: pointer;
+}
+
+.listTestsBtn {
+  background: rgb(46 157 247);
+  font-weight: bold;
+  color: white;
+  border: 2px solid black;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 6px 12px;
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+}
+
+.listTestsBtn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.editIcon {
+  top: 12px;
+  right: 20px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.deleteIcon {
+  top: 12px;
+  right: 52px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.editIcon:hover,
+.deleteIcon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.testVideo {
+  width: 140px;
+  height: 100px;
+}
+
+h3:hover {
+  color: rgb(79, 68, 136);
+  opacity: 0.6;
+  cursor: pointer;
+}

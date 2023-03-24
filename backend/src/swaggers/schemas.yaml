@@ -1,0 +1,133 @@
+# Online Swagger Formatter: https://editor.swagger.io/
+
+components:
+  schemas:
+    Course:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        name:
+          type: string
+          example: "Tên khóa học"
+        cost:
+          type: integer
+          example: 1000000
+        description:
+          type: string
+          example: "Mô tả khóa học"
+        thumbnail:
+          type: string
+          example: "https://example.com/image.png"
+        userId:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+
+    Lesson:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        name:
+          type: string
+          example: "Học JS cơ bản"
+        description:
+          type: string
+          example: "Đây là phần mô tả bài học"
+        videoId:
+          type: string
+          example: "123456789ab"
+        courseId:
+          type: string
+          example: "63da29aae447df24915d7870"
+
+    Question:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        testId:
+          type: string
+          example: "63f6181b24a3e1d7cadbfa47"
+        content:
+          type: string
+          example: "Nội dung câu hỏi"
+        isMultiChoice:
+          type: boolean
+          example: false
+        score:
+          type: integer
+          example: 100
+
+    Register:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        userId:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        courseId:
+          type: string
+          example: "63f1a504ec4c6d99de2315fc"
+
+    TestResult:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        userId:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        courseId:
+          type: string
+          example: "63f1a504ec4c6d99de2315fc"
+        score:
+          type: integer
+          example: 100
+
+    Test:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        lessonId:
+          type: string
+          example: "63eef90bcfe83bb80466e72e"
+        timeLimit:
+          type: integer
+          example: 120
+        score:
+          type: integer
+          example: 100
+        description:
+          type: string
+          example: "Phần mô tả bài test"
+
+    User:
+      type: object
+      properties:
+        _id:
+          type: string
+          example: "63f208ab4c52335ac1ec1fe1"
+        username:
+          type: string
+          example: "username"
+        password:
+          type: string
+          example: "password123"
+        name:
+          type: string
+          example: "Nguyen Van A"
+        email:
+          type: string
+          example: "example@gmail.com"
+        role:
+          type: integer
+          example: 1

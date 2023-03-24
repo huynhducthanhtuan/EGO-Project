@@ -1,0 +1,278 @@
+.courseImage img {
+  margin-bottom: 10px;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.commentExample {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.commentExample > div {
+  text-align: left;
+}
+
+.commentExample img {
+  width: 68px;
+}
+
+.commentBtnPart {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.commentBtnPart > input {
+  width: 100%;
+  height: 40px;
+  border-radius: 6px;
+  border: 2px solid #000;
+  margin-right: 4px;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.commentBtnPart > button {
+  width: 100px;
+  height: 46px;
+  border-radius: 6px;
+}
+
+.commentBtnPart > button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.homeSlider {
+  background: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+}
+
+.course_detail_container {
+  width: 1000px;
+  background: white;
+  margin: 0 auto;
+  border: 1px solid #e9e9e9;
+  padding: 20px;
+}
+
+.course_detail {
+  display: flex;
+  margin: 30px;
+}
+
+.course_image {
+  width: 230px;
+  height: 230px;
+  padding: 30px 20px;
+  background: #f3eded;
+}
+
+.itemImage {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 230px;
+  height: auto;
+  margin: auto;
+  line-height: 200px;
+}
+
+.course_info {
+  text-align: left;
+  margin-left: 40px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 250px;
+  width: 100%;
+}
+
+.course_info > h2 {
+  font-size: 34px;
+}
+
+.register {
+  border: none;
+  font-size: 20px;
+  padding: 6px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+.course_cost,
+.course_lessons {
+  font-size: 18px;
+}
+
+.course_cost > svg,
+.course_lessons > svg {
+  margin-right: 8px;
+}
+
+.course_cost {
+  color: green;
+}
+
+.course_lessons {
+  color: darkred;
+}
+.course_info > p {
+  font-size: 16px;
+  font-style: italic;
+}
+.courseTabs {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-flow: column;
+  grid-gap: 1.6rem;
+  padding: 0px 16px;
+  margin-left: 50px;
+  box-shadow: inset 0 -1px 0 0 #d1d7dc;
+}
+.courseTab {
+  border: 1px solid #ffffff;
+}
+.courseTab button {
+  border: 1px solid #ffffff;
+  background: #fff;
+  cursor: default;
+}
+.tabItem:hover {
+  border-bottom: 2px solid rgb(49, 47, 47);
+}
+.tabItem h6 button {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.3;
+  height: fit-content;
+}
+.tabItem.active {
+  border-bottom: 2px solid rgb(49, 47, 47);
+}
+.tabItem h6 button :hover {
+  opacity: 0.8;
+}
+.tabItem.active h6 button {
+  opacity: 1;
+}
+
+.tabContent {
+  display: none;
+  margin: 20px 20px 20px 35px;
+}
+
+.tabContent.active {
+  display: block;
+}
+.comment_item {
+  margin-left: 15px;
+}
+.comment_item .name {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.comment_item .content {
+  margin: 5px 0;
+  font-size: 17px;
+}
+.description_header {
+  font-size: 26px;
+  font-weight: 650;
+}
+.description {
+  font-size: 18px;
+  text-align: left;
+  font-style: italic;
+}
+.course_decription {
+  margin-bottom: 100px;
+}
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-bottom: 20px;
+}
+.listLesson {
+  position: relative;
+  width: 40%;
+  display: flex;
+  border: 1px solid #e9e9e9;
+  margin: 10px;
+  padding: 20px 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgb(33 47 63 / 10%);
+  height: 160px;
+}
+
+.listLesson:hover {
+  box-shadow: 4px 4px 12px rgb(33 47 63 / 30%);
+}
+
+.itemImage {
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 140px;
+  max-height: 140px;
+  height: auto;
+  margin: auto;
+  line-height: 170px;
+}
+
+.lesson__left {
+  width: 140px;
+  margin: auto;
+}
+
+.lesson__right {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+.lesson__cost {
+  font-size: 14px;
+}
+
+.lesson__cost svg {
+  padding-right: 5px;
+}
+
+.lesson__description {
+  color: rgb(127, 124, 124) !important;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  height: 40px;
+  font-size: 14px;
+}
+.lessonVideo {
+  width: 140px;
+  height: 100px;
+}
+
+.defaultLessonImage {
+  width: 140px;
+  height: 100px;
+}

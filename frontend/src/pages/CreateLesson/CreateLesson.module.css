@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+  margin-left: 15px;
+}
+
+.textCreateLesson {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45.3815px;
+  line-height: 120%;
+  color: #3c3b93;
+  margin-bottom: -40px;
+  margin-left: 22px;
+}
+
+.form {
+  width: 600px;
+  min-height: 470px;
+  padding: 32px 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 6px;
+  margin: 24px;
+  align-self: center;
+  box-shadow: 0 10px 12px 0 rgb(51 62 73 / 12%);
+}
+
+.heading {
+  color: #3751fe;
+  font-size: 18px;
+  line-height: 34px;
+  margin-top: 34px;
+}
+.desc {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 38px;
+}
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 20px 20px 20px;
+}
+.formLabel {
+  text-align: left;
+  font-weight: 200;
+  line-height: 1.8rem;
+  font-size: 14px;
+  color: rgb(66 64 64);
+  font-family: Poppins;
+}
+
+.formForce {
+  text-align: left;
+  font-weight: 200;
+  line-height: 1.8rem;
+  font-size: 14px;
+  color: rgb(211, 52, 52);
+  font-family: Poppins;
+}
+.formControl {
+  color: #544444;
+  border: 1px solid #c1b9b9 !important;
+  padding: 10px 0px 10px 12px !important;
+  border-radius: 7px !important;
+  margin: 0px 15px 0px 15px;
+}
+
+.formSubmit {
+  padding: 12px 39px 12px;
+  color: #ffffff;
+  border: 1px solid;
+  margin-top: 20px;
+  font-size: 15px;
+  background: linear-gradient(180deg, #6e6ce0 0%, #4d4cad 100%);
+  border-radius: 7.05133px;
+}
+.formSubmit:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.formRemind {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  margin-right: -169px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+  text-align: center;
+}
